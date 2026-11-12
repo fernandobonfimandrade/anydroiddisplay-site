@@ -45,9 +45,8 @@
   .btn.secondary:hover { background: rgba(255,255,255,.09); }
   .btn[aria-disabled="true"] { opacity: .55; pointer-events: none; }
   .actions { align-items: center; }
-  /* official Google Play badge: the image carries its own transparent margin */
-  .play-badge { display: inline-block; margin: -10px -6px; line-height: 0; }
-  .play-badge img { height: 68px; width: auto; }
+  .btn.play { background: #000; color: #fff; border-color: rgba(255,255,255,.28); }
+  .btn.play:hover { background: #161616; }
   .note { font-size: 13px; color: var(--text-3); margin-top: 12px; }
   .shot { width: 100%; border-radius: 12px; border: 1px solid var(--stroke); box-shadow: 0 24px 60px rgba(0,0,0,.45); display: block; }
   .card { background: var(--card); border: 1px solid var(--stroke); border-radius: 12px; padding: 24px;
@@ -86,9 +85,17 @@
       <p class="lead">Conecte o celular ou tablet pelo cabo USB e ele vira um monitor de verdade: plug-and-play, até 120 Hz e cerca de 20 ms de atraso, com a codificação feita na placa de vídeo.</p>
       <div class="actions">
         <a id="download" class="btn primary" href="#" aria-disabled="true">⬇ Baixar para Windows</a>
-        <a id="play" class="play-badge" href="https://play.google.com/store/apps/details?id=com.anydroiddisplay.app"><img src="img/google-play-pt-br.png" alt="Disponível no Google Play"></a>
+        <a id="play" class="btn play" href="https://play.google.com/store/apps/details?id=com.anydroiddisplay.app">
+          <svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true">
+            <path fill="#00d7fe" d="M7.5 4.6 26.3 24 7.5 43.4c-.6-.4-1-1.1-1-2V6.6c0-.9.4-1.6 1-2Z"/>
+            <path fill="#00f076" d="M33 17.3 26.3 24 7.5 4.6c.6-.4 1.5-.5 2.3 0L33 17.3Z"/>
+            <path fill="#ff3a44" d="M33 30.7 9.8 43.4c-.8.5-1.7.4-2.3 0L26.3 24l6.7 6.7Z"/>
+            <path fill="#ffd400" d="M40.5 25.8 33 30.7 26.3 24l6.7-6.7 7.5 4.9c1.4.9 1.4 2.7 0 3.6Z"/>
+          </svg>
+          Download na Google Play
+        </a>
       </div>
-      <p class="note" id="download-note">Windows 10 ou 11, 64 bits. O download será liberado em breve.</p>
+      <p class="note"><span id="download-note">Programa do PC gratuito (Windows 10 ou 11, 64 bits) · em breve.</span> App Android: R$ 3,00 na Google Play.</p>
     </div>
     <img class="shot" src="img/destaque.png" alt="AnyDroidDisplay: Android como segundo monitor">
   </div>
@@ -127,7 +134,7 @@
   if (DOWNLOAD_URL) {
     a.href = DOWNLOAD_URL;
     a.removeAttribute("aria-disabled");
-    document.getElementById("download-note").textContent = "Windows 10 ou 11, 64 bits.";
+    document.getElementById("download-note").textContent = "Programa do PC gratuito (Windows 10 ou 11, 64 bits).";
   }
 </script>
 </body>
