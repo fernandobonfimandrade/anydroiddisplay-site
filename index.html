@@ -44,6 +44,10 @@
   .btn.secondary { background: var(--card-2); color: var(--text); }
   .btn.secondary:hover { background: rgba(255,255,255,.09); }
   .btn[aria-disabled="true"] { opacity: .55; pointer-events: none; }
+  .actions { align-items: center; }
+  /* official Google Play badge: the image carries its own transparent margin */
+  .play-badge { display: inline-block; margin: -10px -6px; line-height: 0; }
+  .play-badge img { height: 68px; width: auto; }
   .note { font-size: 13px; color: var(--text-3); margin-top: 12px; }
   .shot { width: 100%; border-radius: 12px; border: 1px solid var(--stroke); box-shadow: 0 24px 60px rgba(0,0,0,.45); display: block; }
   .card { background: var(--card); border: 1px solid var(--stroke); border-radius: 12px; padding: 24px;
@@ -82,7 +86,7 @@
       <p class="lead">Conecte o celular ou tablet pelo cabo USB e ele vira um monitor de verdade: plug-and-play, até 120 Hz e cerca de 20 ms de atraso, com a codificação feita na placa de vídeo.</p>
       <div class="actions">
         <a id="download" class="btn primary" href="#" aria-disabled="true">⬇ Baixar para Windows</a>
-        <a id="play" class="btn secondary" href="https://play.google.com/store/apps/details?id=com.anydroiddisplay.app">▶ App na Google Play</a>
+        <a id="play" class="play-badge" href="https://play.google.com/store/apps/details?id=com.anydroiddisplay.app"><img src="img/google-play-pt-br.png" alt="Disponível no Google Play"></a>
       </div>
       <p class="note" id="download-note">Windows 10 ou 11, 64 bits. O download será liberado em breve.</p>
     </div>
